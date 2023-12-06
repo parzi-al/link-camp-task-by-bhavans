@@ -13,7 +13,7 @@ import Foot from './../components/footer';
 const Home = () => { 
   
    return (
-    <div clas   sName='  relative w-full h-full  bg-cover bg-norepeat 'style={{ backgroundImage:`url(${Even})` }}     >
+    <div className='  relative w-full h-full  bg-cover bg-norepeat 'style={{ backgroundImage:`url(${Even})` }}     >
 <Headers/>
 <div className='absolute w-full flex '>
 <div className='absolute w-full  flex z-1 '>

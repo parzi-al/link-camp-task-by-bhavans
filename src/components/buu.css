@@ -3,7 +3,13 @@
     width: 350px;
     height: 354px;
   }
-  
+  @media screen and (max-width: 400px) {
+    .card {
+      width: 240px;
+      height: 100%;
+    }
+    
+  }
   .content {
     width: 100%;
     height: 100%;
@@ -100,8 +106,12 @@
     padding: 10px;
     background-color: #00000099;
     backdrop-filter: blur(5px);
-    border-radius: 5px;
-  }
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
   
   .title {
     font-size: 18px;
@@ -111,7 +121,7 @@
   }
   
   .title p {
-    width: 50%;
+    width: 100%;
   }
   
   .card-footer {
@@ -119,14 +129,7 @@
     margin-top: 5px;
     font-size: 12px;
   }
-  .back-content
-  {
-
-    background-image: url('../assets/womens.png ');
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
-  }
+ 
   .front .img {
     position: absolute;
     width: 100%;
@@ -139,14 +142,14 @@
     width: 90px;
     height: 90px;
     border-radius: 50%;
-    background-color: #00629B;
+    /* background-color: #00629B; */
     position: relative;
     filter: blur(15px);
     animation: floating 2600ms infinite linear;
   }
   
   #bottom {
-    background-color: #00629B;
+    /* background-color: #00629B; */
     left: 50px;
     top: 0px;
     width: 150px;
@@ -155,7 +158,7 @@
   }
   
   #right {
-    background-color: #1d67b1;
+    /* background-color: #1d67b1; */
     left: 160px;
     top: -80px;
     width: 30px;

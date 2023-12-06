@@ -1,9 +1,9 @@
 import React from 'react'
 import Even from './../assets/eventimg.svg'
+import New from './../assets/link.png'
 
 import Nav from './../components/Navbar';
 import Foot from './../components/footer';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
 
 import Buut from '../components/buut'
 // import { Link } from 'react-router-dom'
@@ -14,12 +14,12 @@ import Buut from '../components/buut'
 const Event = () => { 
   
    return (
-    <div className='  w-full'>
+    <div className='  w-full' >
 
 <Nav/>
-     <div className='w-full bg-[#0c161a] '>
+     <div className='w-full bg-[#0c161a]    '  style={{ backgroundImage:`url(${Even})` }} >
 
-    <section className='  text-white flex pt-40  w-full relative bg-cover 'style={{ backgroundImage:`url(${Even})` }}     >
+    <section className='  text-white flex pt-40  w-full relative bg-cover '    >
 <div className='flex md:flex-row flex-col '>
   
     <div className='md:w-1/2 relative m-10 flex flex-col    '>
@@ -52,26 +52,69 @@ const Event = () => {
     </div>
 
     </div>
-   <div className='w-full flex justify-between grid grid-cols-3   p-10 '>
+   <div className='w-full flex md:flex-row flex-col justify-between md:grid md:grid-cols-3   p-10 '>
    <div className=' p-10'>
-     <Buut name='Eventia1'/>
+     <Buut name='LINK CAMP 2023' 
+    date='23rd December, 2023'
+    description='It`s the time of the year to pass on the legacy and awaken the leader in you.
+ '
+Venue=' Lead College of Management, Palakkad'
+link='#ws'
+status='Open'
+bg={New}
+/>
     </div>
     <div className=' p-10'>
-     <Buut name='Eventia2'/>
+     <Buut name='LINK CAMP 2023' 
+    date='23rd December, 2023'
+    description='It`s the time of the year to pass on the legacy and awaken the leader in you.
+ '
+Venue=' Lead College of Management, Palakkad'
+link='#ws'
+status='Open'
+bg={New}
+/>
+    </div><div className=' p-10'>
+     <Buut name='LINK CAMP 2023' 
+    date='23rd December, 2023'
+    description='It`s the time of the year to pass on the legacy and awaken the leader in you.
+ '
+Venue=' Lead College of Management, Palakkad'
+link='#ws'
+status='Open'
+bg={New}
+/>
+    </div><div className=' p-10'>
+     <Buut name='LINK CAMP 2023' 
+    date='23rd December, 2023'
+    description='It`s the time of the year to pass on the legacy and awaken the leader in you.
+ '
+Venue=' Lead College of Management, Palakkad'
+link='#ws'
+status='Open'
+bg={New}
+/>
+    </div><div className=' p-10'>
+     <Buut name='LINK CAMP 2023' 
+    date='23rd December, 2023'
+    description='It`s the time of the year to pass on the legacy and awaken the leader in you.
+ '
+Venue=' Lead College of Management, Palakkad'
+link='#ws'
+status='Open'
+bg={New}
+/>
+    </div><div className=' p-10'>
+     <Buut name='LINK CAMP 2023' 
+    date='23rd December, 2023'
+    description='It`s the time of the year to pass on the legacy and awaken the leader in you.
+ '
+Venue=' Lead College of Management, Palakkad'
+link='#ws'
+status='Open'
+bg={New}
+/>
     </div>
-    <div className=' p-10'>
-     <Buut name='Eventia3'/>
-    </div>
-    <div className=' p-10'>
-     <Buut name='Eventia4'/>
-    </div>
-    <div className=' p-10'>
-     <Buut name='Eventia5'/>
-    </div>
-    <div className=' p-10'>
-     <Buut name='Eventia6'/>
-    </div>
-
  
      
    
