@@ -13,10 +13,11 @@ const Event = () => {
   const [descriptions, setDes] = useState("");
   const [Img, setImg] = useState("");
   
+  localStorage.setItem(EventName,"");
   const propertys  = [
    
     {
-      names:EventName ,
+      names:localStorage.getItem(EventName) ,
       date:date,
       descriptions:descriptions,
       Venue:Venues,
@@ -26,6 +27,11 @@ const Event = () => {
       },
 
    ];
+
+   const handleClick= ()=>{
+      console.log(propertys.name);
+      localStorage.setItem('propertys', propertys);
+   }
 
    return (
     <div className='  w-full' >
@@ -92,9 +98,9 @@ const Event = () => {
       <h2 class="text-2xl font-bold text-gray-900 mb-4">Event panel</h2>
 
       <form class="flex flex-col"   
-      onsubmit={(e) => {
+      onSubmit={(e) => {
         e.preventDefault();
-          propertys(EventName,Venues,date,links,descriptions);
+          // propertys(EventName,Venues,date,links,descriptions);
       }}
       >  
     
@@ -105,35 +111,36 @@ const Event = () => {
          {
           setEventName(e.target.value);
         }} 
-        class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" 
+        className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" 
         placeholder="Event Name"
         />
            
            <input type="text"  value={Venues} onChange={(e) => {
           setVenue(e.target.value);
-        }}  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Venue"/>
+        }}  className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Venue"/>
         <input type="text"  value={date} onChange={(e) => {
           setDate(e.target.value);
-        }}  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Date"/>
+        }}  className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Date"/>
         <input type="text"  value={links} onChange={(e) => {
           setLinks(e.target.value);
-        }}  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Link"/>
+        }}  className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Link"/>
         <textarea name="description"  value={descriptions} onChange={(e) => {
           setDes(e.target.value);
-        }}  class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Description"></textarea>
+        }}  className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" placeholder="Description"></textarea>
         <input type="file"
           value={Img}
            onChange={(e) =>
            {
             setImg(e.target.value);
           }}
-          class="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" 
+          className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" 
          placeholder="Poster"
 
          />
      
         <button type="submit" 
-        class="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+        className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
+        onSubmit={handleClick}
         >Apply</button>
       </form>
     </div>

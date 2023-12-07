@@ -1,5 +1,5 @@
 import React from 'react'
-import Headers from './../components/header'
+// import Headers from './../components/header'
 import Even from './../assets/eventimg.svg'
 
 import Nav from './../components/Navbar';
@@ -14,7 +14,7 @@ const Home = () => {
   
    return (
     <div className='  relative w-full h-full  bg-cover bg-norepeat 'style={{ backgroundImage:`url(${Even})` }}     >
-<Headers/>
+<Nav/>
 <div className='absolute w-full flex '>
 <div className='absolute w-full  flex z-1 '>
 <svg xmlns="http://www.w3.org/2000/svg" className=' ml-auto m-0'  width="890" height="876" viewBox="0 0 890 876" fill="text">

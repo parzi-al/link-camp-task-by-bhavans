@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 // import Jaba from '../a/ieee-logo.png'
-import Headers from './header'
+// import Headers from './header'
 const Navbar = () => {
   const [scroll, setScroll] = useState(false);
   const location = useLocation().pathname;
