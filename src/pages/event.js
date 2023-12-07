@@ -12,12 +12,12 @@ const Event = () => {
   const [links, setLinks] = useState("");
   const [descriptions, setDes] = useState("");
   const [Img, setImg] = useState("");
+  // const [mg, setlocal] = useState("");
   
-  localStorage.setItem(EventName,"");
   const propertys  = [
    
     {
-      names:localStorage.getItem(EventName) ,
+      names:EventName ,
       date:date,
       descriptions:descriptions,
       Venue:Venues,
@@ -30,7 +30,6 @@ const Event = () => {
 
    const handleClick= ()=>{
       console.log(propertys.name);
-      localStorage.setItem('propertys', propertys);
    }
 
    return (
