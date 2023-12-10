@@ -24,7 +24,7 @@ const butt = () => {
     </p>
     <p id="meta-ieee-logo">
       <a href="https://www.ieee.org/">
-        <img src={Jaba} />
+          
       </a>
       <a href="https://www.ieee.org/join" className="joinIEEE">
         Join IEEE

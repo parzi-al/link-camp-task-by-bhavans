@@ -13,7 +13,7 @@ import Foot from './../components/footer';
 const Home = () => { 
   
    return (
-    <div className='  relative w-full h-full  bg-cover bg-norepeat 'style={{ backgroundImage:`url(${Even})` }}     >
+    <div className='  relative w-full h-screen  bg-cover bg-norepeat 'style={{ backgroundImage:`url(${Even})` }}     >
 <Nav/>
 <div className='absolute w-full flex '>
 <div className='absolute w-full  flex z-1 '>
@@ -49,12 +49,28 @@ LINK
     </div>
 </div>
 
+
    </section>
 
 
     </div>
-    <div className=' z-20   h-full relative md:mt-20  pt-[100px]  '>   
+    <div className=' z-20   h-full relative md:mt-20 '>   
 
+    <div className='md:w-fit  flex flex-col    '>
+    <div className=' flex flex-col m-10 gap-4 text-[#1D67B1] md:items-start items-center'>
+    
+    <span className='md:text-7xl z-20 text-left  font-[1000] text-5xl    '>
+    Welcome 
+    </span>
+    <span className='md:text-7xl z-20   font-[1000] text-5xl    '>
+    to 
+    </span>
+    <span className='md:text-7xl z-20 text-left  font-[1000] text-5xl    '>
+    IEEE 
+LINK
+    </span>
+    </div>
+</div>
 <Foot/>
  </div>
 </div>

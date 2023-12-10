@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import {useEffect} from 'react';
 import Even from './../assets/eventimg.svg'
 import New from './../assets/link.png'
 import Nav from './../components/Navbar';
@@ -13,7 +14,14 @@ const Event = () => {
   const [descriptions, setDes] = useState("");
   const [Img, setImg] = useState("");
   // const [mg, setlocal] = useState("");
-  
+
+
+useEffect(() => {
+  localStorage.setItem('', JSON.stringify(EventName));
+}, [EventName]);
+
+
+
   const propertys  = [
    
     {
@@ -36,7 +44,7 @@ const Event = () => {
     <div className='  w-full' >
 
 <Nav/>
-     <div className='w-full bg-[#0c161a]'  style={{ backgroundImage:`url(${Even})` }} >
+     <div className='w-full bg-[#0c161a] bg-cover'  style={{ backgroundImage:`url(${Even})` }} >
 
     <section className='  text-white flex pt-40  w-full relative bg-cover '    >
 <div className='flex md:flex-row flex-col '>
