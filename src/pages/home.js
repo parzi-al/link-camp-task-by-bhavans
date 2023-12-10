@@ -13,7 +13,7 @@ import Nav from './../components/Navbar';
 const Home = () => { 
   
    return (
-    <div className='  relative w-full h-screen '    >
+    <div className='  relative w-full h-screen  '   >
 <Nav/>
 <div className='absolute w-full  flex '>
 <div className='absolute w-full h-[733px] flex  '>
@@ -50,18 +50,14 @@ LINK
 
    </section>
     </div>
-   <div className=' bg-white  w-full  relative  '>
-        <span className='md:text-4xl  text-white  justify-center   font-[1000]'>
-        Click quickly to know more  
-        </span>
+   <div className=' bg-white  w-full flex justify-center relative  '>
+       
    
-    <div className=' w-[300px] mx-80 w-1/2 md:h-fit h-1/2  flex bg-[#1D67B1]  md:flex md:flex-col p-7 md:z-40 hover:duration-500 hover:shadow-cyan-500/50 rounded-2xl bg-white  shadow-2xl m-10 '>
-        <span className='md:text-4xl  text-white  justify-center   font-[1000]'>
+    <div className=' w-full mx-80 mt-32 w-1/2 md:h-fit h-1/2  flex bg-[#1D67B1]  md:flex md:flex-col p-7 md:z-40 hover:duration-500 hover:shadow-cyan-500/50 rounded-2xl bg-white  shadow-2xl m-10 '>
+        <span className='md:text-9xl  flex text-white items-center  justify-center   font-[1000]'>
        Events
         </span>
-        <div className='flex  md:text-2xl text-xs md:w-fit md:h-fit  w-[10rem]    flex-col'>
-
-   </div>
+       
         </div>
         </div>
 </div>

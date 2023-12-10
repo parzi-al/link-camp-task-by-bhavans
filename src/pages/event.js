@@ -34,7 +34,7 @@ useEffect(() => {
       statuss:'Open',
       bg:New,
       },
-
+      
    ];
 
    const handleClick= ()=>{
