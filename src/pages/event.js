@@ -13,13 +13,14 @@ const Event = () => {
   const [links, setLinks] = useState("");
   const [descriptions, setDes] = useState("");
   const [Img, setImg] = useState("");
-  // const [mg, setlocal] = useState("");
 
 
 useEffect(() => {
-  localStorage.setItem('', JSON.stringify(EventName));
-}, [EventName]);
-
+  const storedEventName = JSON.parse(localStorage.getItem('event'));
+  if (storedEventName) {
+    setEventName(storedEventName);
+  }
+}, []);
 
 
   const propertys  = [
@@ -37,11 +38,18 @@ useEffect(() => {
    ];
 
    const handleClick= ()=>{
-      console.log(propertys.name);
+    localStorage.setItem("events",EventName)
+    localStorage.setItem("vneu",Venues)
+    localStorage.setItem("desc",descriptions)
+    localStorage.setItem("dte",date)
+    localStorage.setItem("link",links)
+    localStorage.setItem("imgs",Img)
+      console.log(EventName);
    }
 
    return (
-    <div className='  w-full' >
+    
+    <div className=' bg-[#11221c]  w-full' >
 
 <Nav/>
      <div className='w-full bg-[#0c161a] bg-cover'  style={{ backgroundImage:`url(${Even})` }} >
@@ -80,7 +88,7 @@ useEffect(() => {
 
     </div>
     
-    <div class="flex flex-col items-center justify-center h-full w-full">
+    <div className="flex flex-col items-center justify-center h-full w-full">
    
    <div className='w-full flex md:flex-row flex-col  justify-between md:grid md:grid-cols-3 gap-10  p-10 '>
    {
@@ -88,23 +96,22 @@ useEffect(() => {
               <Buut
                 key={index}
                 bg={person.bg}
-                descriptions={person.descriptions}
-                names={person.names}
-                date={person.date}
-                Venue={person.Venue}
+                descriptions={localStorage.getItem("desc")||person.descriptions}
+                names={localStorage.getItem("events")||person.names}
+                date={localStorage.getItem("dte")||person.date}
+                Venue={localStorage.getItem("vneu")||person.Venue}
                 statuss={person.statuss}
                 link={person.link}
-    //             
-              />
+          />
             ))}
  
      
    
    </div>
-    <div class="w-full max-w-md bg-white rounded-lg shadow-md p-6">
-      <h2 class="text-2xl font-bold text-gray-900 mb-4">Event panel</h2>
+    <div className="w-full max-w-md bg-white rounded-lg shadow-md    p-6">
+      <h2 className="text-2xl font-bold text-gray-900 mb-4">Event panel</h2>
 
-      <form class="flex flex-col"   
+      <form className="flex flex-col   "   
       onSubmit={(e) => {
         e.preventDefault();
           // propertys(EventName,Venues,date,links,descriptions);
@@ -118,7 +125,7 @@ useEffect(() => {
          {
           setEventName(e.target.value);
         }} 
-        className="bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" 
+        className="  bg-gray-100 text-gray-900 border-0 rounded-md p-2 mb-4 focus:bg-gray-200 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150" 
         placeholder="Event Name"
         />
            
@@ -147,7 +154,7 @@ useEffect(() => {
      
         <button type="submit" 
         className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-indigo-600 hover:to-blue-600 transition ease-in-out duration-150"
-        onSubmit={handleClick}
+        onClick={handleClick}
         >Apply</button>
       </form>
     </div>
