@@ -1,6 +1,7 @@
 import React from 'react'
 // import Headers from './../components/header'
 import Even from './../assets/rec.png'
+import Even2 from './../assets/rec2.png'
 
 import Nav from './../components/Navbar';
 // import Foot from './../components/footer';
@@ -13,15 +14,16 @@ import Nav from './../components/Navbar';
 const Home = () => { 
   
    return (
-    <div className='  relative w-full h-screen  '   >
+    <div className='   relative w-full h-screen  '   >
 <Nav/>
 <div className='absolute w-full  flex '>
 <div className='absolute w-full h-[733px] flex  '>
+    <img src={Even} className='ml-auto  h-[879px]' alt='new' />
 
-    <img src={Even} className='ml-auto h-[879px]' alt='new' />
+    {/* <img src={Even2} className=' h-[879px]' alt='new' /> */}
 </div>
 
-    <span className='text-6xl mx-20 z-10 ml-auto mt-80 font-[1000] items-center text-white '>
+    <span className='text-6xl bg-[#1D67B1] mx-2 z-10 ml-auto mt-80 font-[1000] items-center text-white '>
     Belong Where The <br/>Leaders Thrive
     </span>
 </div>

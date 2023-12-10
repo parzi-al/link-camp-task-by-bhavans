@@ -15,7 +15,7 @@ const Navbar = () => {
     <div>
     {/* <Headers/> */}
       <div
-        className={` left-0 top-0 fixed w-screen h-[100px] flex items-center justify-between px-6 md:px-12 z-50 transition-all ease-in-out duration-500 }`}
+        className={` left-0 top-0 fixed w-screen h-[100px] bg-black flex items-center justify-between px-6 md:px-12 z-50 transition-all ease-in-out duration-500 }`}
       >
         {/* <Link to="/">
           <img

@@ -34,7 +34,7 @@ useEffect(() => {
       statuss:'Open',
       bg:New,
       },
-      
+
    ];
 
    const handleClick= ()=>{
@@ -49,10 +49,10 @@ useEffect(() => {
 
    return (
     
-    <div className=' bg-[#11221c]  w-full' >
+    <div className='  w-full' >
 
 <Nav/>
-     <div className='w-full bg-[#0c161a] bg-cover'  style={{ backgroundImage:`url(${Even})` }} >
+     <div className='w-full  bg-[#00629B]    bg-cover'   >
 
     <section className='  text-white flex pt-40  w-full relative bg-cover '    >
 <div className='flex md:flex-row flex-col '>
@@ -108,8 +108,8 @@ useEffect(() => {
      
    
    </div>
-    <div className="w-full max-w-md bg-white rounded-lg shadow-md    p-6">
-      <h2 className="text-2xl font-bold text-gray-900 mb-4">Event panel</h2>
+    <div className="w-full max-w-md  rounded-lg shadow-md    p-6">
+      <h2 className="text-2xl font-bold  text-gray-900 mb-4">Event panel</h2>
 
       <form className="flex flex-col   "   
       onSubmit={(e) => {
